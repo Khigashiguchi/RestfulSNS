@@ -12,7 +12,7 @@ https://gist.github.com/Khigashiguchi/9b47bd9eea66e87e6f5f2c79af61c2e1
 #### GET /articles/:id
 
 ```
-$ composer api get 'app://self/tickets/1'
+$ composer api get 'app://self/articles/1'
 ```
    
 ```
@@ -35,6 +35,35 @@ content-type: application/hal+json
 		}
 	}
 }
+```
+
+#### GET /articles
+
+```
+$ composer api get 'app://self/articles'
+```
+
+```
+200 OK
+content-type: application/hal+json
+
+{
+    "0": {
+        "id": "1",
+        "user_id": "1",
+        "title": "test",
+        "description": "test",
+        "status": "draft",
+        "created": "15:37:47",
+        "updated": "15:37:47"
+    },
+    "_links": {
+        "self": {
+            "href": "/articles"
+        }
+    }
+}
+
 ```
 
 ## Usage

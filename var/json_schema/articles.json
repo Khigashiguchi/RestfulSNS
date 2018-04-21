@@ -1,0 +1,9 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "articles.json",
+    "title": "Collection of Articles",
+    "type": "array",
+    "items": {
+        "$ref": "article.json"
+    }
+}
