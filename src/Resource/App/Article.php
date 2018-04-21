@@ -12,6 +12,9 @@ class Article extends ResourceObject
     use AuraSqlInject;
     use QueryLocatorInject;
 
+    /**
+     * @JsonSchema(key="article", schema="article.json")
+     */
     public function onGet(string $id) : ResourceObject
     {
         $article = $this->pdo->fetchOne($this->query['article_select'], ['id' => $id]);

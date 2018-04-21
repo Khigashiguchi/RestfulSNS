@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "id": "ticket.json",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The unique identifier for a article."
+        },
+        "user_id": {
+            "type": "string",
+            "description": "The user's id of the article"
+        },
+        "title": {
+            "type": "string",
+            "description": "The title of the article",
+            "minLength": 3,
+            "maxLength": 255
+        },
+        "description": {
+            "type": "string",
+            "description": "The description of the article",
+            "maxLength": 255
+        },
+        "status": {
+            "type": "string",
+            "description": "The name of the status",
+            "maxLength": 255
+        },
+        "created": {
+            "type": "string",
+            "description": "The date and time that the article was created",
+            "format": "datetime"
+        },
+        "updated": {
+            "type": "string",
+            "description": "The date and time that the article was last updated",
+            "format": "datetime"
+        }
+    },
+    "required": ["user_id", "title", "description", "status", "created", "updated"],
+    "additionalProperties": false
+}
