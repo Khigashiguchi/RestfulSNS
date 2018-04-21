@@ -79,7 +79,11 @@ content-type: application/hal+json
 ```
 
 ## Usage
+### Get API Interface Information
 
+```$xslt
+$ php bootstrap/api.php get '/'
+```
 ### Run server
 
     COMPOSER_PROCESS_TIMEOUT=0 composer serve
