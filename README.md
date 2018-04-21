@@ -66,6 +66,18 @@ content-type: application/hal+json
 
 ```
 
+### POST /articles
+
+```$xslt
+$ composer api post 'app://self/articles?user_id=1&title=post_test'
+```
+
+```$xslt
+201 Created
+Location: /articles/3
+content-type: application/hal+json
+```
+
 ## Usage
 
 ### Run server
