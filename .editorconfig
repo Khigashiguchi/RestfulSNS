@@ -2,3 +2,6 @@ root=true
 
 [*.php]
 indent_style=space
+
+[*.twig]
+indent_style=space

@@ -1,0 +1,18 @@
+<h2>List</h2>
+{%  if _ro.body %}
+    <table class="table">
+        <tbody>
+        {%  for row in _ro.body %}
+            <tr>
+                <td><a href="/articles/{{ row.id }}">{{ row.id }}</a></td>
+                <td>{{ row.title }}</td>
+                <td>{{ row.description }}</td>
+                <td>{{ row.status }}</td>
+                <td>{{ row.created|date("Y/m/d H:i:s") }}</td>
+            </tr>
+        {%  endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No Articles</p>
+{% endif %}

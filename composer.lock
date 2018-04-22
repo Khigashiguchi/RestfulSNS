@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a5da285211490dc0b4f1965a4df7b75",
+    "content-hash": "dcc2728d7cd31d7089900171b7832c28",
     "packages": [
         {
             "name": "aura/cli",
@@ -1583,6 +1583,56 @@
                 "support"
             ],
             "time": "2016-10-06T19:31:28+00:00"
+        },
+        {
+            "name": "madapaja/twig-module",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/madapaja/Madapaja.TwigModule.git",
+                "reference": "584b7b2b8f0322aa42cf1341159e0beb6058f019"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/madapaja/Madapaja.TwigModule/zipball/584b7b2b8f0322aa42cf1341159e0beb6058f019",
+                "reference": "584b7b2b8f0322aa42cf1341159e0beb6058f019",
+                "shasum": ""
+            },
+            "require": {
+                "bear/app-meta": "^1.1",
+                "bear/sunday": "^1.1",
+                "mobiledetect/mobiledetectlib": "^2.7",
+                "ray/di": "^2.5.3",
+                "twig/twig": "^2.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "^2.6",
+                "phpunit/phpunit": "~5.7 < 6.0",
+                "squizlabs/php_codesniffer": "^2.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Madapaja\\TwigModule\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Koji Iwasaki",
+                    "email": "iwasaki@cresc.com"
+                }
+            ],
+            "description": "BEAR.Sunday Twig adapter module",
+            "keywords": [
+                "BEAR.Sunday",
+                "BEAR.Sunday module",
+                "twig"
+            ],
+            "time": "2018-01-19T06:27:32+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
