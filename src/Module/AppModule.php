@@ -6,9 +6,12 @@ use BEAR\Package\Provide\Router\AuraRouterModule;
 use BEAR\Resource\Module\JsonSchemalModule;
 use josegonzalez\Dotenv\Loader;
 use Koriym\Now\NowModule;
+use Koriym\QueryLocator\QueryLocatorModule;
 use Ray\AuraSqlModule\AuraSqlModule;
 use Ray\Di\AbstractModule;
-use Koriym\QueryLocator\QueryLocatorModule;
+use Ray\WebFormModule\AuraInputModule;
+use Ray\WebFormModule\FormInterface;
+use Khigashiguchi\RestfulSNS\Form\ArticleForm;
 
 class AppModule extends AbstractModule
 {
@@ -27,5 +30,10 @@ class AppModule extends AbstractModule
         // Database
         $dbConfig = 'sqlite:' . $appDir . '/var/db/sns.sqlite3';
         $this->install(new AuraSqlModule($dbConfig));
+        // Form
+        $this->install(new AuraInputModule);
+        $this->bind(ArticleForm::class);
+        $this->bind(FormInterface::class)->annotatedWith('article_form')->to(ArticleForm::class);
+        $this->install(new PackageModule);
     }
 }
